@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,42 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egC-C8-Hyx">
+                                <rect key="frame" x="139.5" y="228.5" width="96" height="30"/>
+                                <state key="normal" title="drawRect画板"/>
+                                <connections>
+                                    <action selector="cpu_Draw:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIc-zC-xie"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvi-PG-Pai">
+                                <rect key="frame" x="124" y="308.5" width="127" height="30"/>
+                                <state key="normal" title="CAShapelayer画板"/>
+                                <connections>
+                                    <action selector="gpu_Draw:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ccp-9G-ryP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enG-1M-LGs">
+                                <rect key="frame" x="141.5" y="637" width="92" height="30"/>
+                                <state key="normal" title="重新选择画板"/>
+                                <connections>
+                                    <action selector="rechooseDrawingView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="07t-u3-sgh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="egC-C8-Hyx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A2V-Si-X4Y"/>
+                            <constraint firstItem="fvi-PG-Pai" firstAttribute="centerX" secondItem="egC-C8-Hyx" secondAttribute="centerX" id="DaA-LZ-6lg"/>
+                            <constraint firstItem="enG-1M-LGs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GSM-rW-96W"/>
+                            <constraint firstItem="fvi-PG-Pai" firstAttribute="top" secondItem="egC-C8-Hyx" secondAttribute="bottom" constant="50" id="NoY-7N-wsd"/>
+                            <constraint firstItem="egC-C8-Hyx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="krA-7e-xWM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="enG-1M-LGs" secondAttribute="bottom" id="vJp-zi-pcl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

@@ -15,6 +15,8 @@
 		851C902721193E7F001E1580 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C902621193E7F001E1580 /* main.m */; };
 		851C903121193E7F001E1580 /* DrawingBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C903021193E7F001E1580 /* DrawingBoardTests.m */; };
 		851C903C21193E7F001E1580 /* DrawingBoardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C903B21193E7F001E1580 /* DrawingBoardUITests.m */; };
+		851C904C211943F5001E1580 /* CpuDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C904B211943F5001E1580 /* CpuDrawView.m */; };
+		851C905021198718001E1580 /* GpuDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C904F21198718001E1580 /* GpuDrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		851C903721193E7F001E1580 /* DrawingBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		851C903B21193E7F001E1580 /* DrawingBoardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingBoardUITests.m; sourceTree = "<group>"; };
 		851C903D21193E7F001E1580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		851C904A211943F5001E1580 /* CpuDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CpuDrawView.h; sourceTree = "<group>"; };
+		851C904B211943F5001E1580 /* CpuDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CpuDrawView.m; sourceTree = "<group>"; };
+		851C904E21198718001E1580 /* GpuDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GpuDrawView.h; sourceTree = "<group>"; };
+		851C904F21198718001E1580 /* GpuDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GpuDrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		851C901621193E7F001E1580 /* DrawingBoard */ = {
 			isa = PBXGroup;
 			children = (
+				851C904D21194631001E1580 /* CAShapeLayerDraw */,
+				851C9049211943CD001E1580 /* RrawRect */,
 				851C901721193E7F001E1580 /* AppDelegate.h */,
 				851C901821193E7F001E1580 /* AppDelegate.m */,
 				851C901A21193E7F001E1580 /* ViewController.h */,
@@ -130,6 +138,24 @@
 				851C903D21193E7F001E1580 /* Info.plist */,
 			);
 			path = DrawingBoardUITests;
+			sourceTree = "<group>";
+		};
+		851C9049211943CD001E1580 /* RrawRect */ = {
+			isa = PBXGroup;
+			children = (
+				851C904A211943F5001E1580 /* CpuDrawView.h */,
+				851C904B211943F5001E1580 /* CpuDrawView.m */,
+			);
+			path = RrawRect;
+			sourceTree = "<group>";
+		};
+		851C904D21194631001E1580 /* CAShapeLayerDraw */ = {
+			isa = PBXGroup;
+			children = (
+				851C904E21198718001E1580 /* GpuDrawView.h */,
+				851C904F21198718001E1580 /* GpuDrawView.m */,
+			);
+			path = CAShapeLayerDraw;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				851C901C21193E7F001E1580 /* ViewController.m in Sources */,
+				851C904C211943F5001E1580 /* CpuDrawView.m in Sources */,
 				851C902721193E7F001E1580 /* main.m in Sources */,
 				851C901921193E7F001E1580 /* AppDelegate.m in Sources */,
+				851C905021198718001E1580 /* GpuDrawView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
